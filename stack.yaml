@@ -62,7 +62,7 @@ extra-deps:
 - pwstore-fast-2.4.4
 - rocksdb-haskell-1.0.1
 - servant-auth-token-api-0.5.3.0
-
+- servant-server-0.16
 # Override default flag values for local packages and extra-deps
 flags: {}
 
