@@ -59,10 +59,6 @@ library
     Servant.Server.Auth.Token.Patch
     Servant.Server.Auth.Token.Restore
     Servant.Server.Auth.Token.SingleUse
-  hs-source-dirs:      servant-auth-token-acid/src
-  exposed-modules: 
-    Servant.Server.Auth.Token.Acid
-    Servant.Server.Auth.Token.Acid.Schema
   build-depends:
       base                    >= 4.8    && < 5
     , aeson-injector          >= 1.1    && < 1.2
@@ -73,23 +69,18 @@ library
     , mtl                     >= 2.2    && < 2.3
     , pwstore-fast            >= 2.4    && < 2.5
     , servant                 >= 0.11   && < 0.15
-    , servant-server          >= 0.11   && < 0.15
     , servant-auth-token-api  >= 0.5    && < 0.6
+    , servant-server          >= 0.11   && < 0.15
     , text                    >= 1.2    && < 1.3
     , time                    >= 1.5    && < 1.9
     , transformers            >= 0.4    && < 0.6
     , uuid                    >= 1.3    && < 1.4
     , wai                     >= 3.2    && < 3.3
-    , acid-state              >= 0.14   && < 0.15
-    , ghc-prim                >= 0.5    && < 0.6
-    , monad-control           >= 1.0    && < 1.1
-    , safe                    >= 0.3    && < 0.4
-    , safecopy                >= 0.9    && < 0.10
-    , template-haskell        >= 2.11   && < 2.14
-    , transformers-base       >= 0.4    && < 0.5
+
   default-language:    Haskell2010
   default-extensions:
     BangPatterns
+    ConstraintKinds
     DataKinds
     DeriveGeneric
     FlexibleContexts
@@ -100,16 +91,12 @@ library
     KindSignatures
     MultiParamTypeClasses
     OverloadedStrings
-    QuasiQuotes
     RecordWildCards
     ScopedTypeVariables
-    StandaloneDeriving
-    TemplateHaskell
     TupleSections
     TypeFamilies
     TypeOperators
-    UndecidableInstances
-    ConstraintKinds
+
 source-repository head
   type:     git
   location: https://github.com/ncrashed/servant-auth-token
